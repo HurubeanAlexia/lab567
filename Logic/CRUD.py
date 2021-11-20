@@ -11,6 +11,15 @@ def adaugaCheltuiala(numar, suma, data, tip, lista):
     :param lista: lista de cheltuieli
     :return: cheltuiala cu numarul dau sau None daca aceasta nu exista
     """
+    '''if getByNumar(numar, lista) is not None:
+        print(("cheltuiala cu nr-ul dat deja exista")
+    if numar < 0:
+        print(("numarul este negativ!")
+    if suma < 0:
+        print(("suma este negativa!")
+    if tip != "chirie" and tip != "intretinere" and tip != "apa" and tip != "gaz" and tip != "curent":
+        print(("nu exista acest tip de intretinere!")'''
+
     cheltuiala = creeazaCheltuiala(numar, suma, data, tip)
     return lista + [cheltuiala]
 
@@ -49,7 +58,7 @@ def modificaCheltuiala(numar, suma, data, tip, lista):
     '''
     listaNoua = []
     for cheltuiala in lista:
-        if getData(cheltuiala) == data:
+        if getNumar(cheltuiala) == numar:
             cheltuialaNoua = creeazaCheltuiala(numar, suma, data, tip)
             listaNoua.append(cheltuialaNoua)
         else:
