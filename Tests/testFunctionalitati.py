@@ -34,17 +34,6 @@ def testOrdonareCheltuieli():
     assert lista == [[25, 200.5, "03.05.2021", 'apa'], [25, 200, "03.05.2021", 'apa'], [24, 140, "03.05.2021", 'apa']]
 
 
-'''
-def testStergereaTuturorCheltuielilor():
-    lista = []
-    lista = adaugaCheltuiala(1, 200, "13.10.2020", "gaz", lista)
-    lista = adaugaCheltuiala(2, 567, "12.06.2019", "apa", lista)
-    lista = stergereaTuturorCheltuielilor(1, lista)
-    
-    assert len(lista) == 1
-    assert getNumar(1) is None
-    assert getNumar(2) is not None '''
-
 def testVerificareData():
     lst = []
     lst = adaugaCheltuiala(25, 200, "03.05.2021", " ", lst)

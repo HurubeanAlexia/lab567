@@ -1,6 +1,5 @@
 from Domain.cheltuiala import toString
 from Logic.CRUD import adaugaCheltuiala, stergeCheltuiala, modificaCheltuiala
-# from Logic.functionalitati import reducereSuma
 from Logic.functionalitati import crestereSuma, sumaMaximaTip, ordonareCheltuieli, verificareData, sumaLunara, \
     stergereaTuturorCheltuielilor
 
@@ -155,7 +154,7 @@ def runMenu(lista):
         elif optiune == "6":
             lista = uiOrdonareCheltuieli(lista)
         elif optiune == "7":
-            lista = uiSumaLunara(lista)
+            uiSumaLunara(lista)
         elif optiune == "8":
             lista = uiStergereaTuturorCheltuielilor(lista)
         elif optiune == "u":

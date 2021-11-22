@@ -2,6 +2,7 @@
 #from Tests.testAll import runAllTest
 from Logic.CRUD import adaugaCheltuiala
 from Tests.testAll import runAllTest
+from UI.commandLineConsole import menu
 from UI.console import runMenu
 
 def main():
@@ -11,11 +12,14 @@ def main():
     lista = adaugaCheltuiala(2, 780.0, "22.05.2020", "apa", lista)
     #runMenu(lista)
     while True:
-        optiune = input("Dati optiunea:")
-        if optiune == "1":
+        x = input("Alegeti meniul:\n"
+                  "Daca doriti meniul vechi tastati '1'\n"
+                  "Daca doriti meniul nou tastati '2'\n")
+
+        if x == '1':
             runMenu(lista)
-        elif optiune == "x":
-            break
-        else:
-            print("Optiune gresita! Reincercati")
+        elif x == '2':
+            menu(lista)
+
+
 main()
